@@ -1,0 +1,244 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "location": {
+            "value": "eastus"
+        },
+        "extendedLocation": {
+            "value": {}
+        },
+        "virtualNetworkName": {
+            "value": "vnet-test-eastus-001"
+        },
+        "resourceGroup": {
+            "value": "rg-WVD-test-001"
+        },
+        "addressSpaces": {
+            "value": [
+                "10.0.0.0/16"
+            ]
+        },
+        "ipv6Enabled": {
+            "value": false
+        },
+        "subnetCount": {
+            "value": 2
+        },
+        "subnet0_name": {
+            "value": "default"
+        },
+        "subnet0_addressRange": {
+            "value": "10.0.0.0/24"
+        },
+        "subnet1_name": {
+            "value": "snet-test-eastus-001"
+        },
+        "subnet1_addressRange": {
+            "value": "10.0.1.0/28"
+        },
+        "ddosProtectionPlanEnabled": {
+            "value": false
+        },
+        "firewallEnabled": {
+            "value": false
+        },
+        "bastionEnabled": {
+            "value": false
+        },
+        "artifactsLocation": {
+            "value": "https://wvdportalstorageblob.blob.core.windows.net/galleryartifacts/Configuration_9-30-2021.zip"
+        },
+        "nestedTemplatesLocation": {
+            "value": "https://catalogartifact.azureedge.net/publicartifacts/Microsoft.Hostpool-ARM-1.10.2/"
+        },
+        "tokenExpirationTime": {
+            "value": "2021-11-12T00:53:27.239Z"
+        },
+        "vmTemplate": {
+            "value": "{\"domain\":\"\",\"galleryImageOffer\":\"office-365\",\"galleryImagePublisher\":\"MicrosoftWindowsDesktop\",\"galleryImageSKU\":\"19h2-evd-o365pp\",\"imageType\":\"Gallery\",\"imageUri\":null,\"customImageId\":null,\"namePrefix\":\"vmWVD001\",\"osDiskType\":\"StandardSSD_LRS\",\"useManagedDisks\":true,\"vmSize\":{\"id\":\"Standard_D2s_v3\",\"cores\":2,\"ram\":8},\"galleryItemId\":\"MicrosoftWindowsDesktop.office-36519h2-evd-o365pp\"}"
+        },
+        "intune": {
+            "value": false
+        },
+        "hostpoolName": {
+            "value": "hp-WVD-test-001"
+        },
+        "hostpoolDescription": {
+            "value": "Created through the Azure Virtual Desktop extension"
+        },
+        "validationEnvironment": {
+            "value": false
+        },
+        "hostpoolType": {
+            "value": "Pooled"
+        },
+        "loadBalancerType": {
+            "value": "BreadthFirst"
+        },
+        "vmResourceGroup": {
+            "value": "rg-WVD-test-001"
+        },
+        "vmNamePrefix": {
+            "value": "vmWVD001"
+        },
+        "vmLocation": {
+            "value": "eastus"
+        },
+        "availabilityOption": {
+            "value": "None"
+        },
+        "availabilitySetName": {
+            "value": ""
+        },
+        "createAvailabilitySet": {
+            "value": false
+        },
+        "availabilitySetUpdateDomainCount": {
+            "value": 5
+        },
+        "availabilitySetFaultDomainCount": {
+            "value": 2
+        },
+        "availabilityZone": {
+            "value": 1
+        },
+        "vmImageType": {
+            "value": "Gallery"
+        },
+        "vmSize": {
+            "value": "Standard_D2s_v3"
+        },
+        "vmNumberOfInstances": {
+            "value": 2
+        },
+        "vmDiskType": {
+            "value": "StandardSSD_LRS"
+        },
+        "vmUseManagedDisks": {
+            "value": true
+        },
+        "bootDiagnostics": {
+            "value": {
+                "enabled": true
+            }
+        },
+        "virtualNetworkResourceGroupName": {
+            "value": "rg-WVD-test-001"
+        },
+        "existingVnetName": {
+            "value": "vnet-test-eastus-001"
+        },
+        "existingSubnetName": {
+            "value": "snet-test-eastus-001"
+        },
+        "createNetworkSecurityGroup": {
+            "value": true
+        },
+        "aadJoin": {
+            "value": true
+        },
+        "domain": {
+            "value": ""
+        },
+        "ouPath": {
+            "value": ""
+        },
+        "vmAdministratorAccountUsername": {
+            "value": "WVDadmin"
+        },
+        "vmAdministratorAccountPassword": {
+            "value": "P0tat0Beach1211"
+        },
+        "addToWorkspace": {
+            "value": true
+        },
+        "applicationGroupTags": {
+            "value": {}
+        },
+        "availabilitySetTags": {
+            "value": {}
+        },
+        "hostpoolTags": {
+            "value": {}
+        },
+        "imageTags": {
+            "value": {}
+        },
+        "networkInterfaceTags": {
+            "value": {}
+        },
+        "networkSecurityGroupTags": {
+            "value": {}
+        },
+        "virtualMachineTags": {
+            "value": {}
+        },
+        "apiVersion": {
+            "value": "2019-12-10-preview"
+        },
+        "deploymentId": {
+            "value": "01b29e3c-cd4e-4f24-b232-7eedcea6d03e"
+        },
+        "vmGalleryImageOffer": {
+            "value": "office-365"
+        },
+        "vmGalleryImagePublisher": {
+            "value": "MicrosoftWindowsDesktop"
+        },
+        "vmGalleryImageSKU": {
+            "value": "19h2-evd-o365pp"
+        },
+        "vmGalleryImageHasPlan": {
+            "value": false
+        },
+        "networkSecurityGroupRules": {
+            "value": [
+                {
+                    "name": "SSH",
+                    "properties": {
+                        "access": "Allow",
+                        "destinationAddressPrefix": "*",
+                        "destinationPortRange": "22",
+                        "sourceAddressPrefix": "*",
+                        "sourcePortRange": "*",
+                        "protocol": "Tcp",
+                        "priority": 300,
+                        "direction": "Inbound"
+                    }
+                },
+                {
+                    "name": "RDP",
+                    "properties": {
+                        "access": "Allow",
+                        "destinationAddressPrefix": "*",
+                        "destinationPortRange": "3389",
+                        "sourceAddressPrefix": "*",
+                        "sourcePortRange": "*",
+                        "protocol": "Tcp",
+                        "priority": 320,
+                        "direction": "Inbound"
+                    }
+                }
+            ]
+        },
+        "maxSessionLimit": {
+            "value": 25
+        },
+        "workspaceResourceGroup": {
+            "value": "rg-WVD-test-001"
+        },
+        "workspaceName": {
+            "value": "wdws-WVD-test-eastus-001"
+        },
+        "workspaceLocation": {
+            "value": "eastus"
+        },
+        "allApplicationGroupReferences": {
+            "value": ""
+        },
+        "isNewWorkspace": {
+            "value": true
+        }
+    }
+}
