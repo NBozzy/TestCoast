@@ -1,0 +1,32 @@
+# Starter pipeline
+- task: AzureResourceManagerTemplateDeployment@3
+  inputs:
+    deploymentScope: 'Resource Group'
+    azureResourceManagerConnection: 'WVDTestSub(1)(6f7f0dbb-addc-4bfb-b83b-935c07d635cd)'
+    subscriptionId: '6f7f0dbb-addc-4bfb-b83b-935c07d635cd'
+    action: 'Create Or Update Resource Group'
+    resourceGroupName: 'rg-WVD-test-001'
+    location: 'East US'
+    templateLocation: 'URL of the file'
+    csmFileLink: 'https://raw.githubusercontent.com/NBozzy/TestCoast/main/template.json'
+    csmParametersFileLink: 'https://raw.githubusercontent.com/NBozzy/TestCoast/main/parameters.json'
+    deploymentMode: 'Incremental'
+    deploymentName: 'TESTWVD_Deployment'
+# Start with a minimal pipeline that you can customize to build and deploy your code.
+# Add steps that build, run tests, deploy, and more:
+# https://aka.ms/yaml
+
+trigger:
+- main
+
+pool:
+  vmImage: ubuntu-latest
+
+steps:
+- script: echo Hello, world!
+  displayName: 'Run a one-line script'
+
+- script: |
+    echo Add other tasks to build, test, and deploy your project.
+    echo See https://aka.ms/yaml
+  displayName: 'Run a multi-line script'
